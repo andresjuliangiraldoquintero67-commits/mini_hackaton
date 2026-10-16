@@ -1,0 +1,10 @@
+codigo,nombre,tipo,aforo,estado
+ESP-01,Auditorio,aula,100,habilitado
+ESP-02,Cosmos,aula,25,habilitado
+ESP-03,Skilab,aula,20,habilitado
+ESP-04,Spooki,aula,38,habilitado
+ESP-05,Apolo,aula,34,habilitado
+ESP-06,Blanca,cubiculo,12,habilitado
+ESP-07,Azul,cubiculo,10,habilitado
+ESP-08,Amarillas verdes,cubiculo,6,habilitado
+ESP-09,Artemis,aula,32,habilitado
