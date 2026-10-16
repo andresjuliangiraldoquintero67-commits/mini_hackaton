@@ -1,0 +1,16 @@
+{
+  "name": "campus-ops",
+  "version": "0.1.0",
+  "description": "Sistema Central de Gestión Operativa de Campuslands (MVP hackatón)",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "reset": "node --disable-warning=ExperimentalWarning src/db/reset.js",
+    "test": "node --disable-warning=ExperimentalWarning --test",
+    "ia:probar": "node src/ia/probar.js"
+  }
+}
