@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Campuslands | Sistema Central de Gestión Operativa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="bgfx" aria-hidden="true">
+  <i style="top:12%;left:18%"></i><i style="top:30%;left:72%;animation-delay:1s"></i><i style="top:55%;left:40%;animation-delay:2s"></i>
+  <i style="top:78%;left:88%;animation-delay:.5s"></i><i style="top:20%;left:52%;animation-delay:3s"></i><i style="top:68%;left:8%;animation-delay:1.5s"></i>
+</div>
+
+<nav><div class="pill">
+  <a class="logo" href="#inicio">campus<b>lands</b></a>
+  <div class="links"><a class="on" href="#inicio">INICIO</a><a href="#espacios">ESPACIOS</a><a href="#recursos">RECURSOS</a><a href="#incidencias">INCIDENCIAS</a></div>
+  <a class="pbtn" href="#incidencias">Reportar</a>
+</div></nav>
+
+<main>
+<section class="hero" id="inicio"><div class="container">
+  <h1><span class="a">SISTEMA CENTRAL DE</span><span class="b">GESTIÓN OPERATIVA</span></h1>
+  <p>Espacios, recursos tecnológicos e incidencias en un único flujo operativo asistido por IA. El campus funciona mejor cuando se decide con datos. <em>#GoForIt</em></p>
+  <div class="cta"><a class="btn btn-p" href="#espacios">Reservar espacio</a><a class="btn btn-s" href="#incidencias">Reportar incidencia</a></div>
+  <ul class="list"><li>Espacios sin conflictos</li><li>Recursos con trazabilidad</li><li>Triaje inteligente con IA</li></ul>
+</div></section>
+
+<section class="strip">
+  <div class="tick"><div><span>ESPACIOS · RECURSOS TECNOLÓGICOS · INCIDENCIAS · CAMPUSLANDS · </span><span>ESPACIOS · RECURSOS TECNOLÓGICOS · INCIDENCIAS · CAMPUSLANDS · </span></div></div>
+  <div class="stats container">
+    <div class="stat"><div><span class="n" id="st-esp">–</span><span class="l">Espacios habilitados</span></div>
+      <svg viewBox="0 0 40 40" fill="none" stroke="#0076b7" stroke-width="2"><rect x="6" y="8" width="28" height="24" rx="3"/><path d="M6 16h28M14 8v-3M26 8v-3"/></svg></div>
+    <div class="stat"><div><span class="n" id="st-eq">–</span><span class="l">Equipos operativos</span></div>
+      <svg viewBox="0 0 40 40" fill="none" stroke="#0076b7" stroke-width="2"><rect x="5" y="8" width="30" height="20" rx="2"/><path d="M14 33h12M20 28v5"/></svg></div>
+    <div class="stat"><div><span class="n" id="st-inc">–</span><span class="l">Incidencias abiertas</span></div>
+      <svg viewBox="0 0 40 40" fill="none" stroke="#0076b7" stroke-width="2"><path d="M20 6 36 33H4z"/><path d="M20 15v8M20 28v.5"/></svg></div>
+  </div>
+</section>
+
+<section class="sec"><div class="container">
+  <div class="eyebrow">Soluciones integrales</div>
+  <h2 class="h2">Módulos del sistema</h2>
+  <div class="grid">
+    <a class="card" href="#espacios"><div><div class="tag">Módulo 01</div><h3>Espacios</h3><div class="rule"></div>
+      <p>Aulas y cubículos sin solapamientos ni conflictos de <b>aforo</b>, con disponibilidad en tiempo real.</p></div><div class="go">VER ESPACIOS &gt;</div></a>
+    <a class="card" href="#recursos"><div><div class="tag">Módulo 02</div><h3>Recursos tecnológicos</h3><div class="rule"></div>
+      <p>Equipos de cada sala asignados a las reservas, con <b>trazabilidad de estado</b> y control de disponibilidad.</p></div><div class="go">VER RECURSOS &gt;</div></a>
+    <a class="card" href="#incidencias"><div><div class="tag">Módulo 03</div><h3>Incidencias</h3><div class="rule"></div>
+      <p>Clasificación, priorización y enrutamiento automatizado con <b>inteligencia artificial</b>.</p></div><div class="go">VER INCIDENCIAS &gt;</div></a>
+  </div>
+</div></section>
+
+<!-- MÓDULO 1 -->
+<section class="sec" id="espacios"><div class="container">
+  <div class="eyebrow">Módulo 01</div><h2 class="h2">Disponibilidad de espacios</h2>
+  <div class="two">
+    <div class="panel"><div class="panel-h"><h4>Espacios</h4><span class="live">En vivo</span></div>
+      <div class="wrap"><table class="tbl"><thead><tr><th>Espacio</th><th>Aforo</th><th>Ahora</th><th>Estado</th></tr></thead>
+        <tbody id="tb-espacios"><tr><td colspan="4" class="vacio">Cargando espacios…</td></tr></tbody></table></div></div>
+
+    <div class="panel"><div class="panel-h"><h4>Nueva reserva</h4></div>
+      <form class="form" id="f-reserva" novalidate>
+        <div class="full"><label for="r-espacio">Espacio</label><select id="r-espacio" name="espacio_codigo" required></select></div>
+        <div><label for="r-tipo">Solicitante</label><select id="r-tipo" name="tipo_solicitante"><option value="campus">Campus</option><option value="empresa">Empresa</option></select></div>
+        <div><label for="r-org">Organización</label><input id="r-org" name="organizacion" value="Campuslands" maxlength="120" required></div>
+        <div><label for="r-resp">Responsable</label><input id="r-resp" name="responsable" maxlength="120" required></div>
+        <div><label for="r-asis">Asistentes</label><input id="r-asis" name="asistentes" type="number" min="1" required></div>
+        <div><label for="r-fecha">Fecha</label><input id="r-fecha" name="fecha" type="date" required></div>
+        <div><label for="r-tx">Equipos a transmitir</label><select id="r-tx" name="equipos_a_transmitir"><option value="0">Ninguno</option><option value="1">1</option><option value="2">2</option></select></div>
+        <div><label for="r-ini">Hora inicio</label><input id="r-ini" name="hora_inicio" type="time" step="900" value="10:00" required></div>
+        <div><label for="r-fin">Hora fin</label><input id="r-fin" name="hora_fin" type="time" step="900" value="12:00" required></div>
+        <div class="full msg" id="m-reserva" role="status" aria-live="polite"></div>
+        <div class="full"><button class="btn btn-p" style="width:100%" type="submit">Confirmar reserva</button></div>
+      </form></div>
+  </div>
+
+  <div class="panel sep"><div class="panel-h"><h4 id="t-reservas">Reservas del día</h4></div>
+    <div class="wrap"><table class="tbl"><thead><tr><th>Espacio</th><th>Horario</th><th>Organización</th><th>Asistentes</th><th>Equipos</th><th>Estado</th><th></th></tr></thead>
+      <tbody id="tb-reservas"></tbody></table></div></div>
+</div></section>
+
+<!-- MÓDULO 2 -->
+<section class="sec" id="recursos"><div class="container">
+  <div class="eyebrow">Módulo 02</div><h2 class="h2">Recursos tecnológicos</h2>
+  <div class="panel"><div class="panel-h"><h4>Equipos por sala</h4><span class="live">En vivo</span></div>
+    <div class="msg" id="m-recursos" role="status" aria-live="polite" style="margin:16px 20px 0"></div>
+    <div class="wrap"><table class="tbl"><thead><tr><th>Código</th><th>Equipo</th><th>Sala</th><th>Estado</th><th>Disponibilidad</th><th>Cambiar estado</th></tr></thead>
+      <tbody id="tb-recursos"><tr><td colspan="6" class="vacio">Cargando equipos…</td></tr></tbody></table></div></div>
+</div></section>
+
+<!-- MÓDULO 3 -->
+<section class="sec" id="incidencias"><div class="container">
+  <div class="eyebrow">Módulo 03</div><h2 class="h2">Triaje de incidencias</h2>
+  <div class="two">
+    <div class="panel"><div class="panel-h"><h4>Reportar incidencia</h4></div>
+      <form class="form" id="f-incidencia" novalidate>
+        <div class="full"><label for="i-desc">Descripción</label><textarea id="i-desc" name="descripcion" rows="4" maxlength="1000" placeholder="Ej.: el televisor de Apolo no enciende y tenemos presentación a las 10"></textarea></div>
+        <div class="full"><label for="i-esp">Espacio (opcional)</label><select id="i-esp" name="espacio_codigo"></select></div>
+        <div class="full"><button class="btn btn-p" style="width:100%" type="submit">Analizar con IA</button></div>
+      </form></div>
+    <div class="panel"><div class="panel-h"><h4>Resultado del triaje</h4><span class="badge ai" id="b-ia">IA</span></div>
+      <div class="form res-ia" id="res-ia" style="grid-template-columns:1fr">
+        <div class="vacio" style="padding:0">Reporta una incidencia para ver la clasificación.</div>
+      </div></div>
+  </div>
+
+  <div class="panel sep"><div class="panel-h"><h4>Incidencias registradas</h4></div>
+    <div class="msg" id="m-incidencias" role="status" aria-live="polite" style="margin:16px 20px 0"></div>
+    <div class="wrap"><table class="tbl"><thead><tr><th>#</th><th>Descripción</th><th>Clasificación</th><th>Origen</th><th>Estado</th><th></th></tr></thead>
+      <tbody id="tb-incidencias"></tbody></table></div></div>
+</div></section>
+</main>
+
+<footer><div class="container">
+  <h3>Campuslands · El campus bajo presión</h3>
+  <div class="legal"><a href="#inicio">Políticas de tratamiento de datos</a><a href="#inicio">Términos y condiciones</a></div>
+  <p class="copy">© 2026 CAMPUSLANDS // ALL RIGHTS RESERVED</p>
+</div></footer>
+
+<script src="app.js" type="module"></script>
+</body>
+</html>
